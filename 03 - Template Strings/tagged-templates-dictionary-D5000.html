@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tagged Templates</title>
+    <style>
+        abbr {
+            border-bottom: 1px dotted grey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bio">
+
+    </div>
+
+    <script>
+        const dict = {
+            HTML: 'Hyper Text Markup Language',
+            CSS: 'Cascading Style Sheets',
+            JS: 'JavaScript'
+        };
+
+        function addAbbreviations(strings, ...values) {
+            //console.log(`${strings}|${values}`);
+            const abbreviated = values.map(value => {
+                if (dict[value]) {
+                    // console.log(dict[value]);
+                    return `<abbr title="${dict[value]}">${value}</abbr>`
+                }
+                // console.log(value);
+                return value;
+            });
+
+            return strings.reduce((sentence, string, i) => {
+                console.log(`${sentence}|${string}|${i}`);
+                return `${sentence}${string}${abbreviated[i] || ''}`;
+            }, ''); // '' means start with empty string and string reducing.
+            //string.reduce((previousString, string, index)=> output);
+            //reduce function will loop over the strings ,and return a single string.
+        }
+
+        const first = 'D';
+        const last = '5000';
+        const sentence = addAbbreviations `Hi my name is ${first}${last} and I love to code ${'JS'}, ${'HTML'} and ${'CSS'} all day and all night long!`
+            //It still can show up,when put a string in the template string instead of putting a variable.
+
+        const bio = document.querySelector('.bio');
+        const p = document.createElement('p');
+        p.innerHTML = sentence;
+        bio.appendChild(p);
+    </script>
+</body>
+
+</html>
