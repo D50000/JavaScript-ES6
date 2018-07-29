@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring Arrays</title>
+</head>
+
+<body>
+    <script>
+        const details = ['Wes Bos', 123, 'wesbos.com'];
+        const [name, id, website] = details;
+        //destructuring into array.
+        console.log(name, id, website);
+
+        const data = 'Basketball,Sports,90210,23,wes,bos,cool';
+        const [itemName, category, sku, inventory] = data.split(',');
+        // split and destructure.
+
+        const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
+
+        const [captain, assistant, ...players] = team;
+        //ES6 ...values, it will be a array for the rest of players.
+    </script>
+</body>
+
+</html>
