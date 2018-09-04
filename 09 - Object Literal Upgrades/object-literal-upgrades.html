@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Literal Upgrades</title>
+</head>
+<body>
+<script>
+  const first = 'snickers';
+  const last = 'bos';
+  const age = 2;
+  const breed = 'King Charles Cav';
+  const dog = {
+    firstName: first,   //New property name.    
+    last,   //It mean the property name same as the value. 
+     age,
+    breed,
+    pals: ['Hugo', 'Sunny'] //Add new property.
+  };
+  console.log(dog);
+  
+
+  const modal = {
+    create(selector) {
+
+    },
+    open(content) {
+
+    },
+    close(goodbye) {
+
+    }
+  }
+  //In object declaring the function,
+  //create: function(){} === create(){}
+
+  function invertColor(color) {
+      return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+  }
+
+  const key = 'pocketColor';
+  const value = '#ffc600';
+
+  const tShirt = {
+    [key]: value,   //dynamic set property and value.
+    [`${key}Opposite`]: invertColor(value)  //Set the property : value,and it can compute in the object.  
+  };
+  //Previous js must declare the object and undate the value,now you can do it at the same time.
+
+  const keys = ['size', 'color', 'weight'];
+  const values = ['medium', 'red', 100];
+
+  const shirt = {
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift(),
+  }
+  console.log(shirt);
+  //same as using loop to set the object.
+
+
+</script>
+</body>
+</html>
