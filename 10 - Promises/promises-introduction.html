@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Promises!</title>
+</head>
+
+<body>
+  <script>
+    //JS "fetch" will queue the request, but PHP will stop all the processes. 
+    const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+
+    //callback function, run when response is back.
+    postsPromise
+      .then(data => data.json())
+      .then(data => { console.log(data) })
+      .catch((err) => {
+        console.error(err);
+    })
+
+  </script>
+</body>
+
+</html>
