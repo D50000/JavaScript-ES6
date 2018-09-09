@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Symbols</title>
+</head>
+<body>
+<script>
+  // symbol is a unique identifier
+  // wes === persion  => false
+  // wes == persion  => false
+  const wes = Symbol('Wes');
+  const person = Symbol('Wes');
+
+  const classRoom = {
+    [Symbol('Mark')] : { grade: 50, gender: 'male' },
+    [Symbol('olivia')]: { grade: 80, gender: 'female' },
+    [Symbol('olivia')]: { grade: 80, gender: 'female' },
+  };
+
+  // can't loop over the symbol.Not working.
+  for (const person in classRoom) {
+    console.log(person);
+  }
+
+  // getOwnPropertySymbols to get the symbol, and use these for object-key to access all the value.
+  const syms = Object.getOwnPropertySymbols(classRoom);
+  const data = syms.map(sym => classRoom[sym]);
+  console.log(data);
+
+</script>
+</body>
+</html>
