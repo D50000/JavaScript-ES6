@@ -1,9 +1,10 @@
-MODULE #1 New Variables — Creation, Updating and Scoping
-	var Scoping Refresher
-	let VS const
-	let and const in the Real World
-	Temporal Dead Zone
-	Is var Dead? What should I use?
+# JavaScript ES6 overview
+There are overrall ES6 concept. Check it below for details!!
+reference: https://wesbos.com/
+
+## 1 New Variables — Creation, Updating and Scoping
+	Forget about "var"
+	use "const" or "let"
 	
 MODULE #2 Function Improvements: Arrows and Default Arguments
 	Arrow Functions Introduction
