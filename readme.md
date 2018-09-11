@@ -6,13 +6,11 @@ reference: https://wesbos.com/
 	Forget about "var"
 	use "const" or "let"
 	
-MODULE #2 Function Improvements: Arrows and Default Arguments
-	Arrow Functions Introduction
-	More Arrow Function Examples
-	Arrow Functions and `this`
-	Default Function Arguments
-	When NOT to use an Arrow Function
-	Arrow Functions Exercises
+## 2 Function Improvements: Arrows and Default Arguments
+	Common Arrow Functions In ES6
+> .**filter**(item  => item.textContent.includes('Flexbox'))
+> .**map**(item  => item.dataset.time)
+> .**reduce**((runningTotal, seconds) =>  runningTotal + seconds, 0)
 
 MODULE #3 Template Strings
 	Template Strings Introduction
