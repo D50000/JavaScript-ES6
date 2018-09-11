@@ -7,17 +7,37 @@ reference: https://wesbos.com/
 	use "const" or "let"
 	
 ## 2 Function Improvements: Arrows and Default Arguments
-	Common Arrow Functions In ES6
-> .**filter**(item  => item.textContent.includes('Flexbox'))
-> .**map**(item  => item.dataset.time)
-> .**reduce**((runningTotal, seconds) =>  runningTotal + seconds, 0)
+Common Arrow Functions In ES6
+ - **filter**(item  => item.textContent.includes('Flexbox'))
+ - **map**(item  => item.dataset.time)
+ - **reduce**((runningTotal, seconds) =>  runningTotal + seconds, 0)
 
-MODULE #3 Template Strings
-	Template Strings Introduction
-	Creating HTML fragments with Template Literals
-	Tagged Template Literals
-	Tagged Templates Exercise
-	Sanitizing User Data with Tagged Templates
+## 3 Template Strings
+	const sentence = `My dog ${name} is ${age * 7} years old.`;
+	
+	const markup = `
+    <div class="beer">
+      <h2>${beer.name}</h2>
+      <p class="brewery">${beer.brewery}</p>
+      ${renderKeywords(beer.keywords)}
+    </div>
+	`;
+	
+	<p>
+		${song.name} — ${song.artist}
+        ${song.featuring ? `(Featuring ${song.featuring})` : ''}
+	</p>
+	
+	const markup = `
+    <ul class="dogs">
+      ${dogs.map(dog => `
+        <li>
+          ${dog.name}
+          is
+          ${dog.age * 7}
+        </li>`).join('')}
+    </ul>
+	`;
 	
 MODULE #4 Additional String Improvements
 	New String Methods
