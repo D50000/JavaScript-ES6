@@ -16,27 +16,27 @@ Common Arrow Functions In ES6
 	const sentence = `My dog ${name} is ${age * 7} years old.`;
 	
 	const markup = `
-    <div class="beer">
-      <h2>${beer.name}</h2>
-      <p class="brewery">${beer.brewery}</p>
-      ${renderKeywords(beer.keywords)}
-    </div>
+	<div class="beer">
+		<h2>${beer.name}</h2>
+		<p class="brewery">${beer.brewery}</p>
+		${renderKeywords(beer.keywords)}
+	</div>
 	`;
 	
 	<p>
 		${song.name} — ${song.artist}
-        ${song.featuring ? `(Featuring ${song.featuring})` : ''}
+		${song.featuring ? `(Featuring ${song.featuring})` : ''}
 	</p>
 	
 	const markup = `
-    <ul class="dogs">
-      ${dogs.map(dog => `
-        <li>
-          ${dog.name}
-          is
-          ${dog.age * 7}
-        </li>`).join('')}
-    </ul>
+	<ul class="dogs">
+		${dogs.map(dog => `
+		<li>
+			${dog.name}
+			is
+			${dog.age * 7}
+		</li>`).join('')}
+	</ul>
 	`;
 	
 MODULE #4 Additional String Improvements
