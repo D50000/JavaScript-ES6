@@ -13,31 +13,33 @@ Common Arrow Functions In ES6
  - **reduce**((runningTotal, seconds) =>  runningTotal + seconds, 0)
 
 ## 3 Template Strings
-	const sentence = `My dog ${name} is ${age * 7} years old.`;
-	
-	const markup = `
-	<div class="beer">
-		<h2>${beer.name}</h2>
-		<p class="brewery">${beer.brewery}</p>
-		${renderKeywords(beer.keywords)}
-	</div>
-	`;
-	
-	<p>
-		${song.name} — ${song.artist}
-		${song.featuring ? `(Featuring ${song.featuring})` : ''}
-	</p>
-	
-	const markup = `
-	<ul class="dogs">
-		${dogs.map(dog => `
-		<li>
-			${dog.name}
-			is
-			${dog.age * 7}
-		</li>`).join('')}
-	</ul>
-	`;
+```
+const sentence = `My dog ${name} is ${age * 7} years old.`;
+
+const markup = `
+<div class="beer">
+    <h2>${beer.name}</h2>
+	<p class="brewery">${beer.brewery}</p>
+	${renderKeywords(beer.keywords)}
+</div>
+`;
+
+<p>
+	${song.name} — ${song.artist}
+	${song.featuring ? `(Featuring ${song.featuring})` : ''}
+</p>
+
+const markup = `
+<ul class="dogs">
+	${dogs.map(dog => `
+	<li>
+		${dog.name}
+		is
+		${dog.age * 7}
+	</li>`).join('')}
+</ul>
+`;
+```
 	
 MODULE #4 Additional String Improvements
 	New String Methods
