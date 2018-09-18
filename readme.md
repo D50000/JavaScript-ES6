@@ -41,8 +41,14 @@ const markup = `
 `;
 ```
 	
-MODULE #4 Additional String Improvements
+##4 Additional String Improvements
 	New String Methods
+```
+.startsWith(searchvalue, index)
+.endsWith(searchvalue, index)
+.includes(searchvalue, start)
+.repeat(count)
+```
 
 MODULE #5 Destructuring
 	Destructuring Objects
