@@ -41,7 +41,7 @@ const markup = `
 `;
 ```
 	
-##4 Additional String Improvements
+## 4 Additional String Improvements
 	New String Methods
 ```
 .startsWith(searchvalue, index)
@@ -50,11 +50,33 @@ const markup = `
 .repeat(count)
 ```
 
-MODULE #5 Destructuring
-	Destructuring Objects
-	Destructuring Arrays
-	Swapping Variables with Destructuring
-	Destructuring Functions - Multiple returns and named defaults
+## 5 Destructuring
+Duplicate data from Object to Object.
+Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
+	
+	// destructuring syntax :
+	// const first = person.first;
+	// const last = person.last;
+	// const twitter = person.twitter;
+	const  person = {
+		first: 'Wes',
+		last: 'Bos',
+		country: 'Canada',
+		city: 'Hamilton',
+		twitter: '@wesbos'
+	};
+	
+	const {
+		first,
+		last,
+		twitter
+	} = person;
+	
+
+
+	//ES6 ...values, it will auto destructuring to the the Array.
+	const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
+	const [captain, assistant, ...players] = team;
 
 MODULE #6 Iterables & Looping
 	The for of loop
