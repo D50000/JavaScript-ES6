@@ -42,7 +42,7 @@ const markup = `
 ```
 	
 ## 4 Additional String Improvements
-	New String Methods
+New String Methods
 ```
 .startsWith(searchvalue, index)
 .endsWith(searchvalue, index)
