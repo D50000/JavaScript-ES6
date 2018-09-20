@@ -67,6 +67,8 @@ Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
 	};
 	
 	const {
+		// it can be default
+		test = 100,
 		first,
 		last,
 		twitter
@@ -74,7 +76,7 @@ Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
 	
 
 
-	//ES6 ...values, it will auto destructuring to the the Array.
+	//ES6 ...values, it will auto destructuring spread into the the Array.
 	const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 	const [captain, assistant, ...players] = team;
 
