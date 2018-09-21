@@ -80,11 +80,37 @@ Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
 	const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 	const [captain, assistant, ...players] = team;
 
-MODULE #6 Iterables & Looping
-	The for of loop
-	The for of Loop in Action
-	Using for of with Objects
-	
+## 6 iterables & Looping
+Using for of loop with Objects
+```
+const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
+// ps: It iterate over everything in the array.It just return index.
+for (const  index in cuts) {
+	console.log(cuts[index]);
+}
+
+//best way for iteration and support break, continue.
+for (const  cut of cuts) {
+	if(cut === 'Brisket') {
+		continue;
+	}
+	console.log(cut);
+}
+
+// for of loop in Object
+const  apple = {
+	color: 'Red',
+	size: 'Medium',
+	weight: 50,
+	sugar: 10
+};
+
+for (const  prop in apple) {
+	const  value = apple[prop];
+	console.log(prop, value);
+}
+```
+
 MODULE #7 An Array of Array Improvements
 	Array.from() and Array.of()
 	Array. find() and .findIndex()
