@@ -112,12 +112,13 @@ for (const  prop in apple) {
 ```
 
 ## 7 Array Improvements
-	Array.of()
-	Array.from()
-	Array.find()
-	Array.findIndex()
-	Array.some()
-	Array.every()
+Array methods.
+ - Array.of( )
+ - Array.from( )
+ - Array.find( )
+ - Array.findIndex( )
+ - Array.some( )
+ - Array.every( )
 
 MODULE #8 Say Hello to ...Spread and ...Rest
 	Spread Operator Introduction
