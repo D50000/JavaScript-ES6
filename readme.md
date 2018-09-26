@@ -120,12 +120,26 @@ Array methods.
  - Array.some( )
  - Array.every( )
 
-MODULE #8 Say Hello to ...Spread and ...Rest
-	Spread Operator Introduction
-	Spread Exercise
-	More Spread Examples
-	Spreading into a function
-	The ...rest param in Functions and destructuring
+
+## 8 The Spread Operator 
+The ...rest param in Functions and destructuring
+	
+	const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
+	const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
+	//auto spread into a array, and you can insert elements in.
+	const pizzas = [...featured, 'veg', ...specialty];
+	
+	const name = ['Wes', 'Bos'];
+	function sayHi(first, last) {
+		alert(`Hey there ${first} ${last}`);
+	}
+	//same as sayHi(name[0], name[1]);
+	sayHi(...name);
+	
+	const runner = ['Wes Bos', 123, 5.5, 5, 3, 6, 35];
+	const [name, id, ...runs] = runner;
+	console.log(name, id, runs);
+	//...rest_parameters auto declare the variables.
 
 MODULE #9 Object Literal Upgrades
 	Object Literal Upgrades
