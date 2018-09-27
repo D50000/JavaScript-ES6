@@ -141,8 +141,25 @@ The ...rest param in Functions and destructuring
 	console.log(name, id, runs);
 	//...rest_parameters auto declare the variables.
 
-MODULE #9 Object Literal Upgrades
-	Object Literal Upgrades
+
+## 9 Object Literal Upgrades
+Object Methods
+	
+	const first = 'snickers';
+	const last = 'bos';
+	const age = 2;
+	const breed = 'King Charles Cav';
+	const dog = {
+		firstName: first,							//New property name.
+		last,										//It mean the property name same as the value.
+		age,
+		breed,
+		[`${breed}Opposite`]: invertColor(value),	//dynamic set property and value.
+		pals: ['Hugo', 'Sunny'],					//Add new key and value.
+		close(goodbye) {
+													//create: function(){} === create(){}
+		}
+	};
 	
 MODULE #10 Promises
 	Promises
