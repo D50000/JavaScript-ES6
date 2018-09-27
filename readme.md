@@ -11,6 +11,10 @@ Common Arrow Functions In ES6
  - **filter**(item  => item.textContent.includes('Flexbox'))
  - **map**(item  => item.dataset.time)
  - **reduce**((runningTotal, seconds) =>  runningTotal + seconds, 0)
+ - **setTimeout**(() => {
+        console.log(this);
+        this.classList.toggle(second);
+     }, 500);
 
 ## 3 Template Strings
 ```
