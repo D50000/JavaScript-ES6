@@ -127,6 +127,7 @@ Array methods.
 
 ## 8 The Spread Operator 
 The ...rest param in Functions and destructuring
+[Spread example](https://d50000.github.io/JavaScript-ES6/08%20-%20Say%20Hello%20to%20...Spread%20and%20...Rest/jumping-letters-D5000.html)
 	
 	const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
 	const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
@@ -154,14 +155,14 @@ Object Methods
 	const age = 2;
 	const breed = 'King Charles Cav';
 	const dog = {
-		firstName: first,							//New property name.
-		last,										//It mean the property name same as the value.
+		firstName: first,  //New property name.
+		last,  //It mean the property name same as the value.
 		age,
 		breed,
-		[`${breed}Opposite`]: invertColor(value),	//dynamic set property and value.
-		pals: ['Hugo', 'Sunny'],					//Add new key and value.
+		[`${breed}Opposite`]: invertColor(value),  //dynamic set property and value.
+		pals: ['Hugo', 'Sunny'],  //Add new key and value.
 		close(goodbye) {
-													//create: function(){} === create(){}
+		    //create: function(){} === create(){}
 		}
 	};
 	
