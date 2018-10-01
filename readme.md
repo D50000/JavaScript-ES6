@@ -166,11 +166,32 @@ Object Methods
 		}
 	};
 	
-MODULE #10 Promises
-	Promises
-	Building your own Promises
-	Chaining Promises + Flow Control
-	Working with Multiple Promises
+## 10 Promises
+Chaining Promises, Flow Control Working with Multiple Promises.
+
+	//JS "fetch" will queue the request, but PHP will stop all the processes.
+	const postsPromise = fetch('https://www.google.com.tw/');
+	//callback function, run when response is back.
+	postsPromise.then(data => data.json())
+		.then(data => {console.log(data)})
+		.catch((err) => {
+			console.error(err);
+	})
+
+	// "New Promise" resolve => success, reject => fail
+	const p = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		// resolve("success!");
+			reject(Error('Err it isn\'t cool'));
+		}, 1000);
+	});
+	p
+	.then(data => {
+		console.log(data);
+	})
+	.catch(err => {
+		console.error(err);
+	});
 
 MODULE #11 Symbols
 	All About Symbols
