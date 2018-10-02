@@ -193,8 +193,10 @@ Chaining Promises, Flow Control Working with Multiple Promises.
 		console.error(err);
 	});
 
-MODULE #11 Symbols
-	All About Symbols
+## 11 Symbols
+Symbols features
+ - Symbol is a unique identifier, can't loop over the symbol.
+ - getOwnPropertySymbols to get the symbol, and use these for object-key to access all the value.
 
 MODULE #12 Code Quality with ESLint
 	Getting Started with ESLint
