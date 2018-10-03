@@ -198,13 +198,9 @@ Symbols features
  - Symbol is a unique identifier, can't loop over the symbol.
  - getOwnPropertySymbols to get the symbol, and use these for object-key to access all the value.
 
-MODULE #12 Code Quality with ESLint
-	Getting Started with ESLint
-	Airbnb ESLint Settings
-	Line and File Specific Settings
-	ESLint Plugins
-	ESLint inside Atom and Sublime Text
-	Only Allow ESLint Passing Code into your git repos
+## 12 Code Quality with ESLint
+ESLint Airbnb configuration. ESLint Plugins inside Atom and Sublime Text.
+Only Allow ESLint Passing Code into your git repositories.
 	
 MODULE #13 JavaScript Modules and Using npm
 	JavaScript Modules and WebPack 2 Tooling Setup
