@@ -199,8 +199,9 @@ Symbols features
  - getOwnPropertySymbols to get the symbol, and use these for object-key to access all the value.
 
 ## 12 Code Quality with ESLint
-ESLint Airbnb configuration. ESLint Plugins inside Atom and Sublime Text.
-Only Allow ESLint Passing Code into your git repositories.
+ - ESLint Airbnb configuration.
+ - ESLint Plugins inside Atom and Sublime Text.
+ - Only Allow ESLint Passing Code into your git repositories.
 	
 MODULE #13 JavaScript Modules and Using npm
 	JavaScript Modules and WebPack 2 Tooling Setup
