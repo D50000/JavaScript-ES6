@@ -168,6 +168,7 @@ Object Methods
 	
 ## 10 Promises
 Chaining Promises, Flow Control Working with Multiple Promises.
+Promise.ace(), Promise.all()
 
 	//JS "fetch" will queue the request, but PHP will stop all the processes.
 	const postsPromise = fetch('https://www.google.com.tw/');
@@ -239,13 +240,28 @@ MODULE #19 Map and Weak Map
 	Map Metadata with DOM Node Keys
 	WeakMap and Garbage Collection
 
-MODULE #20 Async + Await Flow Control
-	Async Await - Native Promises Review
-	Async Await - Custom Promises Review
-	All About Async + Await
-	Async + Await Error Handling
-	Waiting on Multiple Promises
-	Promisifying Callback Based Functions
+## 20 Async + Await Flow Control
+reference: [Async Await - Native Promises Review](https://wcc723.github.io/javascript/2017/12/30/javascript-async-await/)
+	
+	// The function will block until "await" finish.
+	// When it error will block process.
+	let mingRun = await runPromise('one', 2000)
+	console.log('r1:', mingRun);
+	let auntieRun = await runPromise('two', 2500);
+	console.log('r2:', auntieRun);
+	
+	// Wrap "await" in "async", can use then() and catch().
+	const asyncRunFail = async () => {
+	  let mingRun = await runPromise('one', 2000, false);
+	  let auntieRun = await runPromise('two', 2500);
+	  return `${mingRun}, ${auntieRun}`
+	}
+	asyncRunFail().then(string => {
+	  console.log(string);
+	}).catch(response => {
+	  console.log(response);
+	  // one fail (rejected)
+	})
 
 MODULE #21 ES7, ES8 + Beyond
 	Class Properties
