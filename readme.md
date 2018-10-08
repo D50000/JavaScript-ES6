@@ -204,10 +204,10 @@ Symbols features
  - ESLint Plugins inside Atom and Sublime Text.
  - Only Allow ESLint Passing Code into your git repositories.
 	
-MODULE #13 JavaScript Modules and Using npm
-	JavaScript Modules and WebPack 2 Tooling Setup
-	Creating your own Modules
-	More ES6 Module Practice
+## 13 JavaScript Modules and Using npm
+ - Implement JavaScript Modules need to install npm. npm initial the file(app.js), setup the package.json.
+While install libraries to dependencies(node_modules). Then you can import some function from these libraries to app.js file.
+ - You need to install webpack to bundle these modules together. Install babel, webpack to devDependencies. Setup webpack.config.js for "require"(npm can't use ES6) webpack modules and setup the entry file, bable loading.
 
 MODULE #14 ES6 Tooling
 	Tool-Free Modules with SystemJS (+bonus BrowserSync setup)
