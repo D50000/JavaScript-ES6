@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extending Classes</title>
+</head>
+<body>
+<script>
+  class Animal {
+    constructor(name) {
+      this.name = name;
+      this.thirst = 100;
+      this.belly = [];
+    }
+    drink() {
+      this.thirst -= 10;
+      return this.thirst;
+    }
+    eat(food) {
+      this.belly.push(food);
+      return this.belly;
+    }
+  }
+
+  //same as Java "public class Dog extends Animal{ }"
+  class Dog extends Animal {
+    constructor(name, breed) {
+      // call the class you are extending first (ps: for declaring the Animal name first)
+      super(name);
+      this.breed = breed;
+    }
+    bark() {
+      console.log('BARK BARK BARK!');
+    }
+  }
+
+  const rhino = new Animal('Rhiney');
+  const snickers = new Dog('Snickers', 'King Charles');
+</script>
+</body>
+</html>
