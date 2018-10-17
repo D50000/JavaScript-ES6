@@ -215,11 +215,10 @@ Other way to bundle the package management(jspm). All About Babel + npm scripts 
  - Simple way to bundle the web file, and npm libraries install free.
  - Babel is only work on syntax, need to import cdn.polyfill.io for new methods. (webpack include)
  
-MODULE #15 Classes
-	Prototypal Inheritance Review
-	Say Hello to Classes
-	Extending Classes and using super()
-	Extending Arrays with Classes for Custom Collections
+## 15 Classes Prototypal
+ - Inheritance Review
+ - Extending Classes and using super()
+ - Extending Arrays with Classes for Custom Collections
 
 MODULE #16 Generators
 	Introducing Generators
