@@ -220,10 +220,23 @@ Other way to bundle the package management(jspm). All About Babel + npm scripts 
  - Extending Classes and using super()
  - Extending Arrays with Classes for Custom Collections
 
-MODULE #16 Generators
-	Introducing Generators
-	Using Generators for Ajax Flow Control
-	Looping Generators with for of
+## 16 Generators
+Using Generators for Ajax Flow Control, Looping Generators with for of.
+```
+//generator is function you can run and stop.
+//yield will return.
+function*  listPeople() {
+	let  i = 0;
+	yield  i;
+	i++;
+	yield  i;
+	i++;
+	yield  i;
+}
+//use people.next() to get the result.
+//It will return a object {done, value}
+const  people = listPeople();
+```
 
 MODULE #17 Proxies
 	What are Proxies?
