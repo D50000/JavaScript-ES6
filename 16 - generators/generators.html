@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generators</title>
+</head>
+<body>
+<script>
+  //generator is function you can run and stop.
+  //yield will return.
+  function* listPeople() {
+    let i = 0;
+    yield i;
+    i++;
+    yield i;
+    i++;
+    yield i;
+  }
+  //use people.next() to get the result.
+  //It will return a object {done, value}
+  const people = listPeople();
+
+
+  const inventors = [
+    { first: 'Albert', last: 'Einstein', year: 1879 },
+    { first: 'Isaac', last: 'Newton', year: 1643 },
+    { first: 'Galileo', last: 'Galilei', year: 1564 },
+    { first: 'Marie', last: 'Curie', year: 1867 },
+    { first: 'Johannes', last: 'Kepler', year: 1571 },
+    { first: 'Nicolaus', last: 'Copernicus', year: 1473 },
+    { first: 'Max', last: 'Planck', year: 1858 },
+  ];
+  //It will run 7 time to done the yield,but you will just get one time console.log().
+  function* loop(arr) {
+    console.log(inventors);
+    for (const item of arr) {
+      yield item;
+    }
+  }
+
+  const inventorGen = loop(inventors);
+
+
+</script>
+</body>
+</html>
