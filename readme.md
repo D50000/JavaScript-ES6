@@ -238,10 +238,20 @@ function*  listPeople() {
 const  people = listPeople();
 ```
 
-MODULE #17 Proxies
-	What are Proxies?
-	Another Proxy Example
-	Using Proxies to combat silly errors
+## 17 Proxies
+Proxy can modify the original object properties.A kind of pre-function that access the object properties.
+```
+const  phoneHandler = {
+	set(target, name, value) {
+		target[name] = value.match(/[0-9]/g).join('');
+	},
+	get(target, name) {
+		return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3');
+	}
+}
+//start with a blank object and send to handler.
+const  phoneNumbers = new  Proxy({}, phoneHandler);
+```
 
 MODULE #18 ets and WeakSets
 	Sets
