@@ -253,10 +253,24 @@ const  phoneHandler = {
 const  phoneNumbers = new  Proxy({}, phoneHandler);
 ```
 
-MODULE #18 ets and WeakSets
-	Sets
-	Understanding Sets with Brunch
-	WeakSets
+## 18 Sets and WeakSets
+A set in JS in like a unique array. Can't access item individually, not index base.
+```
+const  people = new  Set();
+//.add()
+//.delete()
+//.clear()
+//.size
+//.values().next()  == for(X of Xs)
+//.has()
+
+//WeakSet is a limitation version of Set.
+//It can only content Objects, and can't iterable.
+//No .clear() method, auto clear when the object reference is null.
+let  dog1 = { name: 'Snickers', age: 3 };
+let  dog2 = { name: 'sunny', age: 1 };
+const  weakSauce = new  WeakSet([dog1, dog2]);
+```
 
 MODULE #19 Map and Weak Map
 	Maps
