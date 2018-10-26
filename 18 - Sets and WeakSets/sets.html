@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sets</title>
+</head>
+<body>
+<script>
+  //"set" can't use index to show the value,and methods below:
+  //"Set" elements is unique and has no key index.
+  //.add()
+  //.delete()
+  //.clear()
+  //.size
+  //.values()
+  const people = new Set();
+  people.add('Wes');
+  people.add('Snickers');
+  people.add('Kait');
+
+  //set is iterable so it can use .next() .
+  for (const person of people) {
+    console.log(person);
+  }
+
+  //declare the "Set" at default.
+  const students = new Set(['Wes', 'Kara', 'Tony']);
+  //Same as array.
+  const dogs = ['Snickers', 'Sunny'];
+  const dogSet = new Set(dogs);
+
+</script>
+</body>
+</html>
