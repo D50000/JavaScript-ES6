@@ -272,10 +272,16 @@ let  dog2 = { name: 'sunny', age: 1 };
 const  weakSauce = new  WeakSet([dog1, dog2]);
 ```
 
-MODULE #19 Map and Weak Map
-	Maps
-	Map Metadata with DOM Node Keys
-	WeakMap and Garbage Collection
+## 19 Map and Weak Map, Maps-metadata
+"Set" for Array, "Map" for Object.
+```
+const  dogs = new  Map();
+for (const [key, val] of dogs) {
+	console.log(key, val);
+}
+//weak-maps no size and can't iterable.
+//WeakMap and StrongMap Garbage Collection not actually the same.
+```
 
 ## 20 Async + Await Flow Control
 reference: [Async Await - Native Promises Review](https://wcc723.github.io/javascript/2017/12/30/javascript-async-await/)
