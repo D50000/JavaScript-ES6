@@ -306,9 +306,14 @@ reference: [Async Await - Native Promises Review](https://wcc723.github.io/javas
 	  // one fail (rejected)
 	})
 
-MODULE #21 ES7, ES8 + Beyond
-	Class Properties
-	padStart and padEnd
-	ES7 Exponential Operator
-	Function Arguments Trailing Comma
-	Object.entries() and Object.values()
+## 21 ES7(es2018), ES8(es2019) new Features
+
+ - Beyond Class Properties => use Babel to convert it into the constructor this.barks.
+
+ - padStart and padEnd ES7 => str.padStart(longestString, "_")
+
+ - Exponential Operator and new method => array.include("xxx")  ,   2**2**2 = 16
+
+ - Function Arguments Trailing Comma => comma in the last line in Array, Object, Function is fine now.
+
+ -  Object.values() and Object.entries() => return value,  return property and value.
