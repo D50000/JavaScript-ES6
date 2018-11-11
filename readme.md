@@ -312,7 +312,7 @@ reference: [Async Await - Native Promises Review](https://wcc723.github.io/javas
 
  - padStart and padEnd ES7 => str.padStart(longestString, "_")
 
- - Exponential Operator and new method => array.include("xxx")  ,   2**2**2 = 16
+ - Exponential Operator and new method => array.include("xxx")  ,   2 ** 2 ** 2 = 16
 
  - Function Arguments Trailing Comma => comma in the last line in Array, Object, Function is fine now.
 

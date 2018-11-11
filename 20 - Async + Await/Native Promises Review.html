@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Native Promises</title>
+</head>
+
+<video controls class="handsome"></video>
+
+<body>
+  <script>
+    // Native Promise:
+    // fetch('api.github.com/users/wesbos').then(res => {
+    //   return res.json();    --->  fetch not support json so need to be converted.
+    // }).then(res => {        --->  success
+    //   console.log(res);
+    // }).catch(err => {       --->  fail
+    //   console.error('OH NOO!!!!!!!');
+    //   console.error(err);
+    // })
+
+    // Webcam, getUserMedia is a Promise base function.
+    const webcam = document.querySelector('.handsome');
+    navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
+      webcam.srcObject = mediaStream;
+      webcam.load();
+      webcam.play();
+    }).catch(err => {
+      console.log(err);
+    })
+  </script>
+</body>
+
+</html>
