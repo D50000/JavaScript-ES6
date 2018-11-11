@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Async Await</title>
+</head>
+
+<body>
+  <script>
+    function breathe(amount) {
+      return new Promise((resolve, reject) => {
+        if (amount < 500) {
+          reject('That is too small of a value');
+        }
+        setTimeout(() => resolve(`Done for ${amount} ms`), amount);
+      });
+    }
+
+    function catchErrors(fn) {
+      return function (...args) {
+        // async function can be catch(error)
+        return fn(...args).catch((err) => {
+          console.error('Ohhhh nooo!!!!!');
+          console.error(err);
+        });
+      }
+    }
+    // wrap all the asynchronous functions in one error handling.
+    // better than try{}.catch{} all the single request.
+
+    async function go(name, last, x) {
+      console.log(`Starting for ${name} ${last}  ${x}!`);
+      const res = await breathe(1000);
+      console.log(res);
+      const res2 = await breathe(300);
+      console.log(res2);
+      const res3 = await breathe(750);
+      console.log(res3);
+      const res4 = await breathe(900);
+      console.log(res4);
+      console.log('end');
+    }
+
+    // high order function syntax. ex: same as .map()
+    const wrappedFunction = catchErrors(go);
+
+    wrappedFunction("Wes", "Bos", "eddie");
+  </script>
+</body>
+
+</html>
