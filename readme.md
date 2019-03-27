@@ -59,9 +59,9 @@ Duplicate data from Object to Object.
 Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
 	
 	// destructuring syntax :
-	// const first = person.first;
-	// const last = person.last;
-	// const twitter = person.twitter;
+	// const { first } = person.first;
+	// const { last } = person.last;
+	// const { twitter } = person.twitter;
 	const  person = {
 		first: 'Wes',
 		last: 'Bos',
