@@ -3,7 +3,7 @@ There are overrall ES6 concept. Check it below for details!!
 reference: https://wesbos.com/
 
 ## 1 New Variables — Creation, Updating and Scoping
-```javascript
+```
 	Forget about "var"
 	use "const" or "let"
 ```
@@ -24,7 +24,7 @@ const sentence = `My dog ${name} is ${age * 7} years old.`;
 
 const markup = `
 <div class="beer">
-    <h2>${beer.name}</h2>
+	<h2>${beer.name}</h2>
 	<p class="brewery">${beer.brewery}</p>
 	${renderKeywords(beer.keywords)}
 </div>
@@ -132,71 +132,71 @@ The ...rest param in Functions and destructuring
 [Spread example](https://d50000.github.io/JavaScript-ES6/08%20-%20Say%20Hello%20to%20...Spread%20and%20...Rest/jumping-letters-D5000.html)
 
 ```javascript
-	const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
-	const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
-	//auto spread into a array, and you can insert elements in.
-	const pizzas = [...featured, 'veg', ...specialty];
+const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
+const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
+//auto spread into a array, and you can insert elements in.
+const pizzas = [...featured, 'veg', ...specialty];
 	
-	const name = ['Wes', 'Bos'];
-	function sayHi(first, last) {
-		alert(`Hey there ${first} ${last}`);
-	}
-	//same as sayHi(name[0], name[1]);
-	sayHi(...name);
+const name = ['Wes', 'Bos'];
+function sayHi(first, last) {
+	alert(`Hey there ${first} ${last}`);
+}
+//same as sayHi(name[0], name[1]);
+sayHi(...name);
 	
-	const runner = ['Wes Bos', 123, 5.5, 5, 3, 6, 35];
-	const [name, id, ...runs] = runner;
-	console.log(name, id, runs);
-	//...rest_parameters auto declare the variables.
+const runner = ['Wes Bos', 123, 5.5, 5, 3, 6, 35];
+const [name, id, ...runs] = runner;
+console.log(name, id, runs);
+//...rest_parameters auto declare the variables.
 ```
 
 ## 9 Object Literal Upgrades
 Object Methods
 ```javascript
-	const first = 'snickers';
-	const last = 'bos';
-	const age = 2;
-	const breed = 'King Charles Cav';
-	const dog = {
-		firstName: first,  //New property name.
-		last,  //It mean the property name same as the value.
-		age,
-		breed,
-		[`${breed}Opposite`]: invertColor(value),  //dynamic set property and value.
-		pals: ['Hugo', 'Sunny'],  //Add new key and value.
-		close(goodbye) {
-		    //create: function(){} === create(){}
-		}
-	};
+const first = 'snickers';
+const last = 'bos';
+const age = 2;
+const breed = 'King Charles Cav';
+const dog = {
+	firstName: first,  //New property name.
+	last,  //It mean the property name same as the value.
+	age,
+	breed,
+	[`${breed}Opposite`]: invertColor(value),  //dynamic set property and value.
+	pals: ['Hugo', 'Sunny'],  //Add new key and value.
+	close(goodbye) {
+	    //create: function(){} === create(){}
+	}
+};
 ```
 
 ## 10 Promises
 Chaining Promises, Flow Control Working with Multiple Promises.
 Promise.ace(), Promise.all()
 ```javascript
-	//JS "fetch" will queue the request, but PHP will stop all the processes.
-	const postsPromise = fetch('https://www.google.com.tw/');
-	//callback function, run when response is back.
-	postsPromise.then(data => data.json())
-		.then(data => {console.log(data)})
-		.catch((err) => {
-			console.error(err);
+//JS "fetch" will queue the request, but PHP will stop all the processes.
+const postsPromise = fetch('https://www.google.com.tw/');
+//callback function, run when response is back.
+postsPromise.then(data => data.json())
+	.then(data => {console.log(data)})
+	.catch((err) => {
+		console.error(err);
 	})
 
-	// "New Promise" resolve => success, reject => fail
-	const p = new Promise((resolve, reject) => {
-	setTimeout(() => {
-		// resolve("success!");
-			reject(Error('Err it isn\'t cool'));
-		}, 1000);
-	});
-	p
-	.then(data => {
-		console.log(data);
-	})
-	.catch(err => {
-		console.error(err);
-	});
+// "New Promise" resolve => success, reject => fail
+const p = new Promise((resolve, reject) => {
+setTimeout(() => {
+	// resolve("success!");
+		reject(Error('Err it isn\'t cool'));
+	}, 1000);
+});
+p
+.then(data => {
+	console.log(data);
+})
+.catch(err => {
+	console.error(err);
+});
 ```
 
 ## 11 Symbols
@@ -293,25 +293,25 @@ for (const [key, val] of dogs) {
 ## 20 Async + Await Flow Control
 reference: [Async Await - Native Promises Review](https://wcc723.github.io/javascript/2017/12/30/javascript-async-await/)
 ```javascript
-	// The function will block until "await" finish.
-	// When it error will block process.
-	let mingRun = await runPromise('one', 2000)
-	console.log('r1:', mingRun);
-	let auntieRun = await runPromise('two', 2500);
-	console.log('r2:', auntieRun);
-	
-	// Wrap "await" in "async", can use then() and catch().
-	const asyncRunFail = async () => {
-	  let mingRun = await runPromise('one', 2000, false);
-	  let auntieRun = await runPromise('two', 2500);
-	  return `${mingRun}, ${auntieRun}`
-	}
-	asyncRunFail().then(string => {
-	  console.log(string);
-	}).catch(response => {
-	  console.log(response);
-	  // one fail (rejected)
-	})
+// The function will block until "await" finish.
+// When it error will block process.
+let mingRun = await runPromise('one', 2000)
+console.log('r1:', mingRun);
+let auntieRun = await runPromise('two', 2500);
+console.log('r2:', auntieRun);
+
+// Wrap "await" in "async", can use then() and catch().
+const asyncRunFail = async () => {
+  let mingRun = await runPromise('one', 2000, false);
+  let auntieRun = await runPromise('two', 2500);
+  return `${mingRun}, ${auntieRun}`
+}
+asyncRunFail().then(string => {
+  console.log(string);
+}).catch(response => {
+  console.log(response);
+  // one fail (rejected)
+})
 ```
 
 ## 21 ES7(es2018), ES8(es2019) new Features
