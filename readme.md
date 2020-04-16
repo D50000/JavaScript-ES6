@@ -3,9 +3,11 @@ There are overrall ES6 concept. Check it below for details!!
 reference: https://wesbos.com/
 
 ## 1 New Variables — Creation, Updating and Scoping
+```javascript
 	Forget about "var"
 	use "const" or "let"
-	
+```
+
 ## 2 Function Improvements: Arrows and Default Arguments
 Common Arrow Functions In ES6
  - **filter**(item  => item.textContent.includes('Flexbox'))
@@ -17,7 +19,7 @@ Common Arrow Functions In ES6
      }, 500);
 
 ## 3 Template Strings
-```
+```javascript
 const sentence = `My dog ${name} is ${age * 7} years old.`;
 
 const markup = `
@@ -57,7 +59,7 @@ New String Methods
 ## 5 Destructuring
 Duplicate data from Object to Object.
 Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
-	
+```javascript
 	// destructuring syntax :
 	// const { first } = person.first;
 	// const { last } = person.last;
@@ -83,10 +85,10 @@ Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
 	//ES6 ...values, it will auto destructuring spread into the the Array.
 	const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 	const [captain, assistant, ...players] = team;
-
+```
 ## 6 iterables & Looping
 Using for of loop with Objects
-```
+```javascript
 const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
 // ps: It iterate over everything in the array.It just return index.
 for (const  index in cuts) {
@@ -128,7 +130,8 @@ Array methods.
 ## 8 The Spread Operator 
 The ...rest param in Functions and destructuring
 [Spread example](https://d50000.github.io/JavaScript-ES6/08%20-%20Say%20Hello%20to%20...Spread%20and%20...Rest/jumping-letters-D5000.html)
-	
+
+```javascript
 	const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
 	const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
 	//auto spread into a array, and you can insert elements in.
@@ -145,11 +148,11 @@ The ...rest param in Functions and destructuring
 	const [name, id, ...runs] = runner;
 	console.log(name, id, runs);
 	//...rest_parameters auto declare the variables.
-
+```
 
 ## 9 Object Literal Upgrades
 Object Methods
-	
+```javascript
 	const first = 'snickers';
 	const last = 'bos';
 	const age = 2;
@@ -165,11 +168,12 @@ Object Methods
 		    //create: function(){} === create(){}
 		}
 	};
-	
+```
+
 ## 10 Promises
 Chaining Promises, Flow Control Working with Multiple Promises.
 Promise.ace(), Promise.all()
-
+```javascript
 	//JS "fetch" will queue the request, but PHP will stop all the processes.
 	const postsPromise = fetch('https://www.google.com.tw/');
 	//callback function, run when response is back.
@@ -193,6 +197,7 @@ Promise.ace(), Promise.all()
 	.catch(err => {
 		console.error(err);
 	});
+```
 
 ## 11 Symbols
 Symbols features
@@ -224,7 +229,7 @@ Other way to bundle the package management(jspm). All About Babel + npm scripts 
 
 ## 16 Generators
 Using Generators for Ajax Flow Control, Looping Generators with for of.
-```
+```javascript
 //generator is function you can run and stop.
 //yield will return.
 function*  listPeople() {
@@ -242,7 +247,7 @@ const  people = listPeople();
 
 ## 17 Proxies
 Proxy can modify the original object properties.A kind of pre-function that access the object properties.
-```
+```javascript
 const  phoneHandler = {
 	set(target, name, value) {
 		target[name] = value.match(/[0-9]/g).join('');
@@ -276,7 +281,7 @@ const  weakSauce = new  WeakSet([dog1, dog2]);
 
 ## 19 Map and Weak Map, Maps-metadata
 "Set" for Array, "Map" for Object.
-```
+```javascript
 const  dogs = new  Map();
 for (const [key, val] of dogs) {
 	console.log(key, val);
@@ -287,7 +292,7 @@ for (const [key, val] of dogs) {
 
 ## 20 Async + Await Flow Control
 reference: [Async Await - Native Promises Review](https://wcc723.github.io/javascript/2017/12/30/javascript-async-await/)
-	
+```javascript
 	// The function will block until "await" finish.
 	// When it error will block process.
 	let mingRun = await runPromise('one', 2000)
@@ -307,6 +312,7 @@ reference: [Async Await - Native Promises Review](https://wcc723.github.io/javas
 	  console.log(response);
 	  // one fail (rejected)
 	})
+```
 
 ## 21 ES7(es2018), ES8(es2019) new Features
 
