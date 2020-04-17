@@ -81,7 +81,6 @@ Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
 	} = person;
 	
 
-
 	//ES6 ...values, it will auto destructuring spread into the the Array.
 	const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 	const [captain, assistant, ...players] = team;
