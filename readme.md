@@ -4,8 +4,8 @@ reference: https://wesbos.com/
 
 ## 1 New Variables — Creation, Updating and Scoping
 ```
-	Forget about "var"
-	use "const" or "let"
+  Forget about "var"
+  use "const" or "let"
 ```
 
 ## 2 Function Improvements: Arrows and Default Arguments
@@ -24,25 +24,25 @@ const sentence = `My dog ${name} is ${age * 7} years old.`;
 
 const markup = `
 <div class="beer">
-	<h2>${beer.name}</h2>
-	<p class="brewery">${beer.brewery}</p>
-	${renderKeywords(beer.keywords)}
+  <h2>${beer.name}</h2>
+  <p class="brewery">${beer.brewery}</p>
+  ${renderKeywords(beer.keywords)}
 </div>
 `;
 
 <p>
-	${song.name} — ${song.artist}
-	${song.featuring ? `(Featuring ${song.featuring})` : ''}
+  ${song.name} — ${song.artist}
+  ${song.featuring ? `(Featuring ${song.featuring})` : ''}
 </p>
 
 const markup = `
 <ul class="dogs">
-	${dogs.map(dog => `
-	<li>
-		${dog.name}
-		is
-		${dog.age * 7}
-	</li>`).join('')}
+  ${dogs.map(dog => `
+    <li>
+      ${dog.name}
+      is
+      ${dog.age * 7}
+    </li>`).join('')}
 </ul>
 `;
 ```
@@ -60,30 +60,36 @@ New String Methods
 Duplicate data from Object to Object.
 Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
 ```javascript
-	// destructuring syntax :
-	// const { first } = person.first;
-	// const { last } = person.last;
-	// const { twitter } = person.twitter;
-	const  person = {
-		first: 'Wes',
-		last: 'Bos',
-		country: 'Canada',
-		city: 'Hamilton',
-		twitter: '@wesbos'
-	};
+  // destructuring syntax :
+  // const { first } = person.first;
+  // const { last } = person.last;
+  // const { twitter } = person.twitter;
+const  person = {
+  first: 'Wes',
+  last: 'Bos',
+  country: 'Canada',
+  city: 'Hamilton',
+  twitter: '@wesbos'
+};
 	
-	const {
-		// it can be default
-		test = 100,
-		first,
-		last,
-		twitter
-	} = person;
+const {
+  // it can be default
+  test = 100,
+  first,
+  last,
+  twitter
+} = person;
 	
 
+<<<<<<< HEAD
+//ES6 ...values, it will auto destructuring spread into the the Array.
+const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
+const [captain, assistant, ...players] = team;
+=======
 	//ES6 ...values, it will auto destructuring spread into the the Array.
 	const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 	const [captain, assistant, ...players] = team;
+>>>>>>> 6d95de50db7fa0dcd3718f2e722990776a698dfc
 ```
 ## 6 iterables & Looping
 Using for of loop with Objects
@@ -91,28 +97,28 @@ Using for of loop with Objects
 const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
 // ps: It iterate over everything in the array.It just return index.
 for (const  index in cuts) {
-	console.log(cuts[index]);
+  console.log(cuts[index]);
 }
 
 //best way for iteration and support break, continue.
 for (const  cut of cuts) {
-	if(cut === 'Brisket') {
-		continue;
-	}
-	console.log(cut);
+  if(cut === 'Brisket') {
+    continue;
+  }
+  console.log(cut);
 }
 
 // for of loop in Object
 const  apple = {
-	color: 'Red',
-	size: 'Medium',
-	weight: 50,
-	sugar: 10
+  color: 'Red',
+  size: 'Medium',
+  weight: 50,
+  sugar: 10
 };
 
 for (const  prop in apple) {
-	const  value = apple[prop];
-	console.log(prop, value);
+  const  value = apple[prop];
+  console.log(prop, value);
 }
 ```
 
@@ -138,7 +144,7 @@ const pizzas = [...featured, 'veg', ...specialty];
 	
 const name = ['Wes', 'Bos'];
 function sayHi(first, last) {
-	alert(`Hey there ${first} ${last}`);
+  alert(`Hey there ${first} ${last}`);
 }
 //same as sayHi(name[0], name[1]);
 sayHi(...name);
@@ -157,15 +163,15 @@ const last = 'bos';
 const age = 2;
 const breed = 'King Charles Cav';
 const dog = {
-	firstName: first,  //New property name.
-	last,  //It mean the property name same as the value.
-	age,
-	breed,
-	[`${breed}Opposite`]: invertColor(value),  //dynamic set property and value.
-	pals: ['Hugo', 'Sunny'],  //Add new key and value.
-	close(goodbye) {
-	    //create: function(){} === create(){}
-	}
+  firstName: first,  //New property name.
+  last,  //It mean the property name same as the value.
+  age,
+  breed,
+  [`${breed}Opposite`]: invertColor(value),  //dynamic set property and value.
+  pals: ['Hugo', 'Sunny'],  //Add new key and value.
+  close(goodbye) {
+    //create: function(){} === create(){}
+  }
 };
 ```
 
@@ -177,24 +183,24 @@ Promise.ace(), Promise.all()
 const postsPromise = fetch('https://www.google.com.tw/');
 //callback function, run when response is back.
 postsPromise.then(data => data.json())
-	.then(data => {console.log(data)})
-	.catch((err) => {
-		console.error(err);
-	})
+  .then(data => {console.log(data)})
+  .catch((err) => {
+    console.error(err);
+  })
 
 // "New Promise" resolve => success, reject => fail
 const p = new Promise((resolve, reject) => {
 setTimeout(() => {
-	// resolve("success!");
-		reject(Error('Err it isn\'t cool'));
-	}, 1000);
+  // resolve("success!");
+    reject(Error('Err it isn\'t cool'));
+  }, 1000);
 });
 p
 .then(data => {
-	console.log(data);
+  console.log(data);
 })
 .catch(err => {
-	console.error(err);
+  console.error(err);
 });
 ```
 
@@ -232,12 +238,12 @@ Using Generators for Ajax Flow Control, Looping Generators with for of.
 //generator is function you can run and stop.
 //yield will return.
 function*  listPeople() {
-	let  i = 0;
-	yield  i;
-	i++;
-	yield  i;
-	i++;
-	yield  i;
+  let  i = 0;
+  yield  i;
+  i++;
+  yield  i;
+  i++;
+  yield  i;
 }
 //use people.next() to get the result.
 //It will return a object {done, value}
@@ -248,12 +254,12 @@ const  people = listPeople();
 Proxy can modify the original object properties.A kind of pre-function that access the object properties.
 ```javascript
 const  phoneHandler = {
-	set(target, name, value) {
-		target[name] = value.match(/[0-9]/g).join('');
-	},
-	get(target, name) {
-		return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3');
-	}
+  set(target, name, value) {
+    target[name] = value.match(/[0-9]/g).join('');
+  },
+  get(target, name) {
+    return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3');
+  }
 }
 //start with a blank object and send to handler.
 const  phoneNumbers = new  Proxy({}, phoneHandler);
@@ -283,7 +289,7 @@ const  weakSauce = new  WeakSet([dog1, dog2]);
 ```javascript
 const  dogs = new  Map();
 for (const [key, val] of dogs) {
-	console.log(key, val);
+  console.log(key, val);
 }
 //weak-maps no size and can't iterable.
 //WeakMap and StrongMap Garbage Collection not actually the same.
