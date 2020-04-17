@@ -60,10 +60,10 @@ New String Methods
 Duplicate data from Object to Object.
 Destructuring Objects,  Arrays. Switching and Declaring the variable in Arrays.
 ```javascript
-  // destructuring syntax :
-  // const { first } = person.first;
-  // const { last } = person.last;
-  // const { twitter } = person.twitter;
+// destructuring syntax :
+// const { first } = person.first;
+// const { last } = person.last;
+// const { twitter } = person.twitter;
 const  person = {
   first: 'Wes',
   last: 'Bos',
@@ -79,17 +79,14 @@ const {
   last,
   twitter
 } = person;
-	
 
-<<<<<<< HEAD
 //ES6 ...values, it will auto destructuring spread into the the Array.
 const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 const [captain, assistant, ...players] = team;
-=======
-	//ES6 ...values, it will auto destructuring spread into the the Array.
-	const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
-	const [captain, assistant, ...players] = team;
->>>>>>> 6d95de50db7fa0dcd3718f2e722990776a698dfc
+
+//ES6 ...values, it will auto destructuring spread into the the Array.
+const  team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
+const [captain, assistant, ...players] = team;
 ```
 ## 6 iterables & Looping
 Using for of loop with Objects
