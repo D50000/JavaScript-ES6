@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Object Literal Upgrades</title>
-</head>
-<body>
-<script>
-  const first = 'snickers';
-  const last = 'bos';
-  const age = 2;
-  const breed = 'King Charles Cav';
-  const dog = {
-    firstName: first,   //New property name.    
-    last,   //It mean the property name same as the value. 
-     age,
-    breed,
-    pals: ['Hugo', 'Sunny'] //Add new property.
-  };
-  console.log(dog);
-  
+  <head>
+    <meta charset="UTF-8" />
+    <title>Object Literal Upgrades</title>
+  </head>
+  <body>
+    <script>
+      const first = "snickers";
+      const last = "bos";
+      const age = 2;
+      const breed = "King Charles Cav";
+      const dog = {
+        firstName: first, // New property name.
+        last, // It mean the property name same as the value.
+        age,
+        breed,
+        pals: ["Hugo", "Sunny"], // Add new property.
+      };
+      console.log(dog);
 
-  const modal = {
-    create(selector) {
+      const modal = {
+        create(selector) {
+          console.log("run create");
+        },
+        open(content) {
+          console.log("run open");
+        },
+        close(goodbye) {
+          console.log("run close");
+        },
+      };
+      // In object declaring the function,
+      // create: function(){} === create(){}
 
-    },
-    open(content) {
+      function invertColor(color) {
+        return (
+          "#" +
+          (
+            "000000" +
+            (0xffffff ^ parseInt(color.substring(1), 16)).toString(16)
+          ).slice(-6)
+        );
+      }
 
-    },
-    close(goodbye) {
+      const key = "pocketColor";
+      const value = "#ffc600";
 
-    }
-  }
-  //In object declaring the function,
-  //create: function(){} === create(){}
+      const tShirt = {
+        [key]: value, // Dynamic set property and value.
+        [`${key}Opposite`]: invertColor(value), // Set the property : value,and it can compute in the object.
+      };
+      // Previous js must declare the object and update the value,now you can do it at the same time.
 
-  function invertColor(color) {
-      return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
-  }
+      const keys = ["size", "color", "weight"];
+      const values = ["medium", "red", 100];
 
-  const key = 'pocketColor';
-  const value = '#ffc600';
-
-  const tShirt = {
-    [key]: value,   //dynamic set property and value.
-    [`${key}Opposite`]: invertColor(value)  //Set the property : value,and it can compute in the object.  
-  };
-  //Previous js must declare the object and update the value,now you can do it at the same time.
-
-  const keys = ['size', 'color', 'weight'];
-  const values = ['medium', 'red', 100];
-
-  const shirt = {
-    [keys.shift()]: values.shift(),
-    [keys.shift()]: values.shift(),
-    [keys.shift()]: values.shift(),
-  }
-  console.log(shirt);
-  //same as using loop to set the object.
-
-
-</script>
-</body>
+      const shirt = {
+        [keys.shift()]: values.shift(),
+        [keys.shift()]: values.shift(),
+        [keys.shift()]: values.shift(),
+      };
+      console.log(shirt);
+      // Same as using loop to set the object.
+    </script>
+  </body>
 </html>

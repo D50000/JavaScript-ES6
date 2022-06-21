@@ -141,35 +141,37 @@ for (const prop in apple) {
 
 Array methods.
 
-- Array.of( )
-- Array.from( )
-- Array.find( )
-- Array.findIndex( )
-- Array.some( )
-- Array.every( )
+```javascript
+Array.of(x); // Create a x element of array, instead of undefined value.
+Array.from(); // Convert the iterable/array-like object to array instant.
+Array.find();
+Array.findIndex();
+Array.some();
+Array.every();
+```
 
 ## 8 The Spread Operator
 
-The ...rest param in Functions and destructuring
+The `...rest params` in Functions and destructuring
 [Spread example](https://d50000.github.io/JavaScript-ES6/08%20-%20Say%20Hello%20to%20...Spread%20and%20...Rest/jumping-letters-D5000.html)
 
 ```javascript
 const featured = ["Deep Dish", "Pepperoni", "Hawaiian"];
 const specialty = ["Meatzza", "Spicy Mama", "Margherita"];
-//auto spread into a array, and you can insert elements in.
+// Auto spread into a array, and you can insert elements in.
 const pizzas = [...featured, "veg", ...specialty];
 
 const name = ["Wes", "Bos"];
 function sayHi(first, last) {
   alert(`Hey there ${first} ${last}`);
 }
-//same as sayHi(name[0], name[1]);
+// Same as sayHi(name[0], name[1]);
 sayHi(...name);
 
 const runner = ["Wes Bos", 123, 5.5, 5, 3, 6, 35];
 const [name, id, ...runs] = runner;
 console.log(name, id, runs);
-//...rest_parameters auto declare the variables.
+// ...rest_parameters auto declare the variables.
 ```
 
 ## 9 Object Literal Upgrades
@@ -182,27 +184,29 @@ const last = "bos";
 const age = 2;
 const breed = "King Charles Cav";
 const dog = {
-  firstName: first, //New property name.
-  last, //It mean the property name same as the value.
+  firstName: first, // New property name.
+  last, // It mean the property name same as the value.
   age,
   breed,
-  [`${breed}Opposite`]: invertColor(value), //dynamic set property and value.
-  pals: ["Hugo", "Sunny"], //Add new key and value.
+  [`${breed}Opposite`]: invertColor(value), // Dynamic set property and value.
+  pals: ["Hugo", "Sunny"], // Add new key and value.
   close(goodbye) {
-    //create: function(){} === create(){}
+    console.log(`run close ${goodbye}`);
+    // dog.close() to run the function inside.
   },
 };
 ```
 
 ## 10 Promises
 
-Chaining Promises, Flow Control Working with Multiple Promises.
-Promise.ace(), Promise.all()
+Chaining Promises, Flow Control Working with Multiple Promises.  
+`Promise.race()`(Pick the fastest return)  
+`Promise.all()`(Wait for all)
 
 ```javascript
-//JS "fetch" will queue the request, but PHP will stop all the processes.
+// JS "fetch" will queue the request, but PHP will stop all the processes.
 const postsPromise = fetch("https://www.google.com.tw/");
-//callback function, run when response is back.
+// Callback function, run when response is back.
 postsPromise
   .then((data) => data.json())
   .then((data) => {
@@ -215,7 +219,7 @@ postsPromise
 // "New Promise" resolve => success, reject => fail
 const p = new Promise((resolve, reject) => {
   setTimeout(() => {
-    // resolve("success!");
+    // Resolve("success!");
     reject(Error("Err it isn't cool"));
   }, 1000);
 });

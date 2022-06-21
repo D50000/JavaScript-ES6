@@ -34,10 +34,10 @@
 
 <script>
   const heading = document.querySelector('.jump');
-  heading.innerHTML = sparanWrap(heading.textContent);
+  heading.innerHTML = spreadWrap(heading.textContent);
   //add back to the head tag.
 
-  function sparanWrap(word) {
+  function spreadWrap(word) {
     return [...word].map(letter => `<span>${letter}</span>`).join('');
   }
   //spread text into array and map each element into span tag,

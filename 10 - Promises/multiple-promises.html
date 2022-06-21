@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Chaining Promises</title>
-</head>
-<body>
-<script>
-  // const weather = new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve({ temp: 29, conditions: 'Sunny with Clouds'});
-  //   }, 2000);
-  // });
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chaining Promises</title>
+  </head>
+  <body>
+    <script>
+      // Separate 'Promise' function:
+      // const weather = new Promise((resolve) => {
+      //   setTimeout(() => {
+      //     resolve({ temp: 29, conditions: 'Sunny with Clouds'});
+      //   }, 2000);
+      // });
 
-  // const tweets = new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve(['I like cake', 'BBQ is good too!']);
-  //   }, 500);
-  // });
+      // const tweets = new Promise((resolve) => {
+      //   setTimeout(() => {
+      //     resolve(['I like cake', 'BBQ is good too!']);
+      //   }, 500);
+      // });
 
-  // Promise
-  //   .all([weather, tweets])
-  //   .then(responses => {
-  //     const [weatherInfo, tweetInfo] = responses;
-  //     console.log(weatherInfo, tweetInfo)
-  //   });
+      // Promise
+      //   .all([weather, tweets])
+      //   .then(responses => {
+      //     const [weatherInfo, tweetInfo] = responses;
+      //     console.log(weatherInfo, tweetInfo)
+      //   });
 
-  const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
-  const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+      const postsPromise = fetch("http://wesbos.com/wp-json/wp/v2/posts");
+      const streetCarsPromise = fetch(
+        "http://data.ratp.fr/api/datasets/1.0/search/?q=paris"
+      );
 
-  Promise
-    // ".all" will wait all the queue to single response. 
-    .all([postsPromise, streetCarsPromise])
-    .then(responses => {
-      // Promise return back will many kids of data type(not only json), so use data.json() instead of JSON.parse().
-      return Promise.all(responses.map(res => res.json()))
-    })
-    // for the second promise response
-    .then(responses => {
-      console.log(responses);
-    });
-
-</script>
-</body>
+      Promise
+        // ".all" will wait all the queue to single response.
+        .all([postsPromise, streetCarsPromise])
+        .then((responses) => {
+          // Promise return back will many kids of data type(not only json), so use data.json() instead of JSON.parse().
+          return Promise.all(responses.map((res) => res.json()));
+        })
+        // For the second promise response
+        .then((responses) => {
+          console.log(responses);
+        });
+    </script>
+  </body>
 </html>
