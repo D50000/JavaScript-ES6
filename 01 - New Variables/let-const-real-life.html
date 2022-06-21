@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>let and const real world</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        {
-            const name = 'wes';
-            console.log(name);
-        }
-        //curly bracket is a kind of block scope.
+      {
+        const name = "wes";
+        console.log(name);
+      }
+      //curly bracket is a kind of block scope.
 
-        for (let i = 0; i < 10; i++) {
-            //use let scope for for statement.
-            console.log(i);
-            setTimeout(function() {
-                console.log('The number is ' + i);
-            }, 1000);
-        }
+      for (let i = 0; i < 10; i++) {
+        //use let scope for for statement.
+        console.log(i);
+        setTimeout(function () {
+          console.log("The number is " + i);
+        }, 1000);
+      }
 
-
-        //Conclusion
-        //use const by default
-        //only use let if rebinding is needed
-        //var shouldn't be used in ES6
+      //Conclusion
+      //use const by default
+      //only use let if rebinding is needed
+      //var shouldn't be used in ES6
     </script>
-</body>
-
+  </body>
 </html>

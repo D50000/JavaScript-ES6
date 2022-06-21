@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>let and const</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        function setWidth() {
-            var width = 100; //'var' mean for global
-            console.log(width);
-        }
-        setWidth();
+      function setWidth() {
+        var width = 100; //'var' mean for global
+        console.log(width);
+      }
+      setWidth();
 
-        var age = 100;
-        if (age > 12) {
-            const dogYears = age * 7; //'const' mean it never change.
-            console.log(`You are ${dogYears} dog years old!`);
-        }
+      var age = 100;
+      if (age > 12) {
+        const dogYears = age * 7; //'const' mean it never change.
+        console.log(`You are ${dogYears} dog years old!`);
+      }
 
-        let height = 200;
-        const key = 'abc123';
+      let height = 200;
+      const key = "abc123";
     </script>
-</body>
-
+  </body>
 </html>
