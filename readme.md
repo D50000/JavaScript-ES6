@@ -254,7 +254,7 @@ Symbols features
 Other way to bundle the package management(jspm). All About Babel + npm scripts polyfilling ES6 for Older Browsers.
 
 - Simple way to bundle the web file, and npm libraries install free.
-- Babel is only work on syntax, need to import cdn.polyfill.io for new methods. (webpack include)  
+- Babel is only work on syntax, need to import cdn.polyfill.io for new methods. (webpack include)
 - https://babeljs.io/
 
 ## 15. Classes Prototypal
@@ -266,11 +266,11 @@ Other way to bundle the package management(jspm). All About Babel + npm scripts 
 
 ## 16. Generators
 
-Using Generators for Ajax Flow Control, Looping Generators with for of.
+Using Generators for **Ajax Flow Control**. Looping Generators with `for of`.
 
 ```javascript
-//generator is function you can run and stop.
-//yield will return.
+// Generator is function you can run and stop.
+// Yield will return.
 function* listPeople() {
   let i = 0;
   yield i;
@@ -279,14 +279,14 @@ function* listPeople() {
   i++;
   yield i;
 }
-//use people.next() to get the result.
-//It will return a object {done, value}
+// Use people.next() to get the result.
+// It will return a object {done, value}
 const people = listPeople();
 ```
 
 ## 17. Proxies
 
-Proxy can modify the original object properties.A kind of pre-function that access the object properties.
+Proxy can modify the original object properties. A kind of pre-function that access the object properties.
 
 ```javascript
 const phoneHandler = {
@@ -297,7 +297,7 @@ const phoneHandler = {
     return target[name].replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
   },
 };
-//start with a blank object and send to handler.
+// Start with a blank object and send to handler.
 const phoneNumbers = new Proxy({}, phoneHandler);
 ```
 
@@ -305,18 +305,18 @@ const phoneNumbers = new Proxy({}, phoneHandler);
 
 A set in JS in like a unique array. Can't access item individually, not index base.
 
-```
+```javascript
 const  people = new  Set();
-//.add()
-//.delete()
-//.clear()
-//.size
-//.values().next()  == for(X of Xs)
-//.has()
+people.add('test')
+people.delete()
+people.clear()
+people.size
+people.values().next()  == for(X of Xs)
+people.has()
 
-//WeakSet is a limitation version of Set.
-//It can only content Objects, and can't iterable.
-//No .clear() method, auto clear when the object reference is null.
+// WeakSet is a limitation version of Set.
+// It can only content Objects, and can't iterable.
+// No .clear() method, auto clear when the object reference is null.
 let  dog1 = { name: 'Snickers', age: 3 };
 let  dog2 = { name: 'sunny', age: 1 };
 const  weakSauce = new  WeakSet([dog1, dog2]);
@@ -324,20 +324,22 @@ const  weakSauce = new  WeakSet([dog1, dog2]);
 
 ## 19. Map and Weak Map, Maps-metadata
 
-"Set" for Array, "Map" for Object.
+**_Set_ for Array, _Map_ for Object**
 
 ```javascript
 const dogs = new Map();
 for (const [key, val] of dogs) {
   console.log(key, val);
 }
-//weak-maps no size and can't iterable.
-//WeakMap and StrongMap Garbage Collection not actually the same.
+// Weak-maps no size and can't iterable.
+// WeakMap and StrongMap Garbage Collection not actually the same.
 ```
 
 ## 20. Async + Await Flow Control
 
-reference: [Async Await - Native Promises Review](https://wcc723.github.io/javascript/2017/12/30/javascript-async-await/)
+`async function > await promise`
+
+[Async Await - Native Promises Review](https://wcc723.github.io/javascript/2017/12/30/javascript-async-await/)
 
 ```javascript
 // The function will block until "await" finish.

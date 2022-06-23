@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Promise Functions</title>
+  </head>
 
-<head>
-  <title>Promisifying Functions</title>
-</head>
-
-<body>
-  <script>
-    /* this api original response callback function.
+  <body>
+    <script>
+      /* This api original response callback function.
     navigator.geolocation.getCurrentPosition(function (pos) {
       console.log('it worked!');
       console.log(pos);
@@ -17,21 +16,20 @@
     });
     */
 
-    function getCurrentPosition(...args) {
-      return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(...args, resolve, reject);
-      });
-    }
+      function getCurrentPosition(...args) {
+        return new Promise((resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(...args, resolve, reject);
+        });
+      }
 
-    async function go() {
-      console.log('starting');
-      const pos = await getCurrentPosition();
-      console.log(pos);
-      console.log('finished');
-    }
+      async function go() {
+        console.log("starting");
+        const pos = await getCurrentPosition();
+        console.log(pos);
+        console.log("finished");
+      }
 
-    go();
-  </script>
-</body>
-
+      go();
+    </script>
+  </body>
 </html>
