@@ -1,8 +1,8 @@
-# JavaScript ES6 overview
+# JavaScript ES6 Overview
 
 There are overall ES6 concept. Check it below for details!!
 
-## 1 New Variables — Creation, Updating and Scoping
+## 1. New Variables — Creation, Updating and Scoping
 
 ```Javascript
 var x = 1;
@@ -10,7 +10,7 @@ let y = 2;
 const z = 3;
 ```
 
-## 2 Function Improvements: Arrows and Default Arguments
+## 2. Function Improvements: Arrows and Default Arguments
 
 Common Arrow Functions In ES6
 
@@ -24,7 +24,7 @@ setTimeout(() => {
   }, 500);
 ```
 
-## 3 Template Strings
+## 3. Template Strings
 
 ```javascript
 const sentence = `My dog ${name} is ${age * 7} years old.`;
@@ -58,7 +58,7 @@ const markup = `
 `;
 ```
 
-## 4 Additional String Improvements
+## 4. Additional String Improvements
 
 New String Methods
 
@@ -69,7 +69,7 @@ String.includes(searchValue, start);
 String.repeat(count);
 ```
 
-## 5 Destructuring (copying)
+## 5. Destructuring (copying)
 
 Duplicate data from Object to Object.
 Destructuring Objects, Arrays. Switching and Declaring the variable in Arrays.
@@ -104,7 +104,7 @@ const team = ["Wes", "Harry", "Sarah", "Keegan", "Riker"];
 const [captain, assistant, ...players] = team;
 ```
 
-## 6 iterables & Looping
+## 6. iterables & Looping
 
 Using `for of` loop with Objects
 
@@ -137,7 +137,7 @@ for (const prop in apple) {
 }
 ```
 
-## 7 Array Improvements
+## 7. Array Improvements
 
 Array methods.
 
@@ -150,7 +150,7 @@ Array.some();
 Array.every();
 ```
 
-## 8 The Spread Operator
+## 8. The Spread Operator
 
 The `...rest params` in Functions and destructuring
 [Spread example](https://d50000.github.io/JavaScript-ES6/08%20-%20Say%20Hello%20to%20...Spread%20and%20...Rest/jumping-letters-D5000.html)
@@ -174,7 +174,7 @@ console.log(name, id, runs);
 // ...rest_parameters auto declare the variables.
 ```
 
-## 9 Object Literal Upgrades
+## 9. Object Literal Upgrades
 
 Object Methods
 
@@ -197,7 +197,7 @@ const dog = {
 };
 ```
 
-## 10 Promises
+## 10. Promises
 
 Chaining Promises, Flow Control Working with Multiple Promises.  
 `Promise.race()`(Pick the fastest return)  
@@ -230,41 +230,41 @@ p.then((data) => {
 });
 ```
 
-## 11 Symbols
+## 11. Symbols
 
 Symbols features
 
-- Symbol is a unique identifier, can't loop over the symbol.
-- getOwnPropertySymbols to get the symbol, and use these for object-key to access all the value.
+- Symbol is a unique identifier, **can't loop** over the symbol.
+- `getOwnPropertySymbols()` to get the symbol, and use these for object-key to access all the value.
 
-## 12 Code Quality with ESLint
+## 12. Code Quality with ESLint
 
 - ESLint Airbnb configuration.
 - ESLint Plugins inside Atom and Sublime Text.
 - Only Allow ESLint Passing Code into your git repositories.
 
-## 13 JavaScript Modules and Using npm
+## 13. JavaScript Modules and Using npm
 
 - Implement JavaScript Modules need to install npm. npm initial the file(app.js), setup the package.json.
   While install libraries to dependencies(node_modules). Then you can import some function from these libraries to app.js file.
-- You need to install webpack to bundle these modules together. Install babel, webpack to devDependencies. Setup webpack.config.js for "require"(npm can't use ES6) webpack modules and setup the entry file, bable loading.
+- You need to install webpack to bundle these modules together. Install babel, webpack to devDependencies. Setup webpack.config.js for "require"(npm can't use ES6) webpack modules and setup the entry file, babel loading.
 
-## 14 ES6 Tooling Tool-Free Modules with SystemJS
+## 14. ES6 Tooling Tool-Free Modules with SystemJS
 
-Other way to bundle the package management(jspm). All About Babel + npm scripts Polyfilling ES6 for Older Browsers.
+Other way to bundle the package management(jspm). All About Babel + npm scripts polyfilling ES6 for Older Browsers.
 
 - Simple way to bundle the web file, and npm libraries install free.
-- Babel is only work on syntax, need to import cdn.polyfill.io for new methods. (webpack include)
-  ps:
-  https://babeljs.io/
+- Babel is only work on syntax, need to import cdn.polyfill.io for new methods. (webpack include)  
+- https://babeljs.io/
 
-## 15 Classes Prototypal
+## 15. Classes Prototypal
 
 - Inheritance Review
-- Extending Classes and using super()
+- Extending Classes by using `super()`
+- `static function` === private class method
 - Extending Arrays with Classes for Custom Collections
 
-## 16 Generators
+## 16. Generators
 
 Using Generators for Ajax Flow Control, Looping Generators with for of.
 
@@ -284,7 +284,7 @@ function* listPeople() {
 const people = listPeople();
 ```
 
-## 17 Proxies
+## 17. Proxies
 
 Proxy can modify the original object properties.A kind of pre-function that access the object properties.
 
@@ -301,7 +301,7 @@ const phoneHandler = {
 const phoneNumbers = new Proxy({}, phoneHandler);
 ```
 
-## 18 Sets and WeakSets
+## 18. Sets and WeakSets
 
 A set in JS in like a unique array. Can't access item individually, not index base.
 
@@ -322,7 +322,7 @@ let  dog2 = { name: 'sunny', age: 1 };
 const  weakSauce = new  WeakSet([dog1, dog2]);
 ```
 
-## 19 Map and Weak Map, Maps-metadata
+## 19. Map and Weak Map, Maps-metadata
 
 "Set" for Array, "Map" for Object.
 
@@ -335,7 +335,7 @@ for (const [key, val] of dogs) {
 //WeakMap and StrongMap Garbage Collection not actually the same.
 ```
 
-## 20 Async + Await Flow Control
+## 20. Async + Await Flow Control
 
 reference: [Async Await - Native Promises Review](https://wcc723.github.io/javascript/2017/12/30/javascript-async-await/)
 
@@ -363,7 +363,7 @@ asyncRunFail()
   });
 ```
 
-## 21 ES7(es2018), ES8(es2019) new Features
+## 21. ES7(es2018), ES8(es2019) new Features
 
 - Beyond Class Properties => use Babel to convert it into the constructor this.barks.
 
